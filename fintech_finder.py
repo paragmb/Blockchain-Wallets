@@ -80,6 +80,7 @@ w3 = Web3(Web3.HTTPProvider('HTTP://127.0.0.1:7545'))
 # From `crypto_wallet.py import the functions generate_account, get_balance,
 #  and send_transaction
 # YOUR CODE HERE
+from crypto_wallet import w3, generate_account, get_balance, send_transaction
 
 ################################################################################
 # Fintech Finder Candidate Information
@@ -131,7 +132,7 @@ st.sidebar.markdown("## Client Account Address and Ethernet Balance in Ether")
 # @TODO:
 #  Call the `generate_account` function and save it as the variable `account`
 # YOUR CODE HERE
-
+account = generate_account(w3)
 ##########################################
 
 # Write the client's Ethereum account address to the sidebar
@@ -147,7 +148,14 @@ st.sidebar.write(account.address)
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
 # YOUR CODE HERE
+# Display the Etheremum Account balance
+st.text("\n")
+st.text("\n")
+st.markdown("## Ethereum Account Balance:")
 
+# Call the get_balance function and write the account balance to the screen
+ether_balance = get_balance(w3, account.address)
+st.sidebar.write(ether_balance)
 ##########################################
 
 # Create a select box to chose a FinTech Hire candidate
