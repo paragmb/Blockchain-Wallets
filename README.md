@@ -11,7 +11,7 @@ Ensure the conda dev environment is activated.
 
 Using CLI, please run the Streamlit application by using 'streamlit run fintech_finder.py'.
 
-## Transaction
+## Transaction on Ganache
 
 One transaction was executed for fintech professional Ash. He was hired for 4 hours at hourly rate per ether of 0.33 eth. The total transaction paid was 1.32 eth. Following images of the transaction have been uploaded.
 
